@@ -1,4 +1,4 @@
-# Book Assistant Telegram Bot
+# Goodreads Book Assistant Telegram Bot
 
 The Book Assistant Telegram Bot, accessible via `@bookish_thief_bot` on Telegram, is designed to help users search for books on Goodreads, mark them as read, and receive daily random quotes from their list of read books.
 

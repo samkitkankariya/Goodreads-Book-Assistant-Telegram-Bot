@@ -10,10 +10,10 @@ from telegram import Update
 from telegram.ext import Application, ContextTypes, CommandHandler, CallbackContext, MessageHandler
 from datetime import datetime
 
-#logging.basicConfig(
-#    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-#    level=logging.INFO
-#)
+logging.basicConfig(
+   format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+   level=logging.INFO
+)
 logger = logging.getLogger(__name__)
 
 #Goodreads scraping functions here
@@ -111,8 +111,7 @@ async def scrape_book_quotes(book_name, bot, chat_id):
 
 
 # Telegram Bot Token (replace 'YOUR_TOKEN' with your actual bot token)
-#TOKEN = '7088427087:AAGbXtNdWjdwhbNXxkOzcQMq8gjLzbrRpgw'
-TOKEN = '6747878340:AAFp_L5-PNdpnY8Nae5ZcuggqdlpAYi4_7E'
+TOKEN = 'YOUR-TOKEN'
 
 # Initialize SQLite database connection
 conn = sqlite3.connect('user_data.db')
@@ -158,7 +157,7 @@ async def search_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("No results found for the given book name.")
 
 
-# Command handler for marking books as read and saving to the database
+
 # Command handler for marking books as read and saving to the database
 async def markread_command(update: Update, context: CallbackContext):
     if len(context.args) == 0:
